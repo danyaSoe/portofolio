@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0B0C0F;
+  color: #e2e2e2;
+  overflow-x: hidden;
+}
+
+/* CRT Overlay Effect */
+.crt-overlay::before {
+  content: ' ';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 9999;
+  background-size: 100% 4px, 3px 100%;
+  pointer-events: none;
+}
+
+.crt-overlay::after {
+  content: ' ';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 9998;
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+}
+
+/* Glow Text Effect */
+.glow-text {
+  text-shadow: 0 0 10px rgba(52, 229, 7, 0.8);
+}
+
+/* Glow Border Effect */
+.glow-border {
+  box-shadow: 0 0 15px rgba(52, 229, 7, 0.2);
+}
+
+/* Scanline Content Background */
+.scanline-content {
+  background: linear-gradient(to bottom, transparent 50%, rgba(52, 229, 7, 0.02) 50%);
+  background-size: 100% 4px;
+}
+
+/* Terminal Scrollbar Styling */
+.terminal-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.terminal-scrollbar::-webkit-scrollbar-track {
+  background: #121414;
+}
+
+.terminal-scrollbar::-webkit-scrollbar-thumb {
+  background: #34e507;
+}
+
+/* Scanlines Effect */
+.scanlines::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  z-index: 200;
+  background-size: 100% 4px, 3px 100%;
+  pointer-events: none;
+}
+
+/* CRT Flicker Animation */
+.crt-flicker {
+  animation: flicker 0.15s infinite;
+}
+
+/* Pixel Grid Background */
+.pixel-grid {
+  background-image: radial-gradient(rgba(52, 229, 7, 0.05) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+/* Terminal Cursor */
+.terminal-cursor::after {
+  content: '_';
+  animation: blink 1s step-end infinite;
+}
+
+/* Material Symbols Icon Styling */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Custom Scrollbar for custom-scrollbar class */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #34e507;
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #4af626;
+}
+
+/* Selection Styling */
+::selection {
+  background-color: #34e507;
+  color: #063900;
+}
+
+/* Text Smoothing */
+@supports (font-smoothing: antialiased) {
+  body {
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Component Utilities */
+@layer components {
+  .terminal-header {
+    @apply flex items-center justify-between px-4 py-2 bg-surface-container-highest border-b border-outline-variant;
+  }
+
+  .terminal-content {
+    @apply flex-1 overflow-y-auto max-h-[819px] scanline-content terminal-scrollbar;
+  }
+
+  .terminal-window {
+    @apply relative bg-surface border border-outline-variant shadow-2xl overflow-hidden;
+  }
+
+  .modal-overlay {
+    @apply fixed inset-0 flex items-center justify-center p-4 md:p-gutter bg-black/60 backdrop-blur-sm;
+  }
+
+  .nav-link {
+    @apply text-on-surface-variant font-medium hover:text-surface-tint transition-all duration-150 font-label-sm text-label-sm;
+  }
+
+  .nav-link-active {
+    @apply text-surface-tint font-bold border-b-2 border-surface-tint pb-1 font-label-sm text-label-sm;
+  }
+
+  .button-primary {
+    @apply px-6 py-4 bg-surface-tint text-on-primary font-headline-md text-headline-md border border-surface-tint hover:bg-transparent hover:text-surface-tint transition-all duration-300;
+  }
+
+  .button-secondary {
+    @apply px-6 py-4 border border-outline-variant text-on-surface-variant font-headline-md text-headline-md hover:border-surface-tint hover:text-surface-tint transition-all duration-300;
+  }
+
+  .button-danger {
+    @apply px-6 py-2 border border-error/50 text-error font-label-sm text-label-sm hover:bg-error hover:text-on-error transition-all;
+  }
+}
