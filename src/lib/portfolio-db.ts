@@ -26,6 +26,7 @@ export const experiences: Experience[] = [
     description: 'Introduction to public masses about ITB and its campus.',
     tasks: ['Write and produce the theme song'],
     year: '2025',
+    images: [],
   },
   {
     id: 'experience_02',
@@ -37,6 +38,7 @@ export const experiences: Experience[] = [
       'Plan and organize a profitable event in 1 month',
     ],
     year: '2025',
+    images: [],
   },
   {
     id: 'experience_03',
@@ -45,6 +47,7 @@ export const experiences: Experience[] = [
     description: 'Math, physics, and informatics competition by the students of Sekolah Teknologi Elektro dan Informatika - Komputasi ITB.',
     tasks: ['Design graphic assets for physical and online publication of the event'],
     year: '2025',
+    images: [],
   },
   {
     id: 'experience_04',
@@ -56,6 +59,7 @@ export const experiences: Experience[] = [
       'Operate the visuals of each performance',
     ],
     year: '2025',
+    images: [],
   },
   {
     id: 'experience_05',
@@ -64,6 +68,7 @@ export const experiences: Experience[] = [
     description: 'Excursion for first year students of Sekolah Teknologi Elektro dan Informatika - Komputasi ITB as a means of tying them together.',
     tasks: ['Provide consumption for participants', 'Procure sound and lighting systems for night gig'],
     year: '2025',
+    images: [],
   },
   {
     id: 'experience_06',
@@ -75,6 +80,7 @@ export const experiences: Experience[] = [
       'Provide necessary knowledge for new ITB students in order to become a member of KM ITB',
     ],
     year: '2025',
+    images: [],
   },
   {
     id: 'experience_07',
@@ -87,6 +93,7 @@ export const experiences: Experience[] = [
     ],
     year: '2025',
     yearEnd: '2026',
+    images: [],
   },
   {
     id: 'experience_08',
@@ -95,6 +102,7 @@ export const experiences: Experience[] = [
     description: 'Yearly legacy concert by ITBJazz showcasing the talents of Ermy Kulit and Sandhy Sondoro.',
     tasks: ['Procure logistic needs for the event', 'Performed as a guitar player for the opening band'],
     year: '2025',
+    images: [],
   },
   {
     id: 'experience_09',
@@ -103,6 +111,7 @@ export const experiences: Experience[] = [
     description: 'Festivities to celebrate the 43rd anniversary of HMIF ITB.',
     tasks: ['Organize a ceremonial event to honour HMIF ITB', 'Organize a sharing and games session with alumni'],
     year: '2025',
+    images: [],
   },
   {
     id: 'experience_10',
@@ -112,6 +121,7 @@ export const experiences: Experience[] = [
     tasks: ['Train mentors to provide necessary help to future ITBJazz members'],
     year: '2025',
     yearEnd: '2026',
+    images: [],
   },
   {
     id: 'experience_11',
@@ -121,6 +131,7 @@ export const experiences: Experience[] = [
     tasks: ['Organize a pre-orientation event for future HMIF ITB members', 'Oversee the selection of heads of organizing committees'],
     year: '2025',
     yearEnd: '2026',
+    images: [],
   },
   {
     id: 'experience_12',
@@ -129,6 +140,7 @@ export const experiences: Experience[] = [
     description: 'Festivities to celebrate the graduation of HMIF ITB members.',
     tasks: ['Ensure the safety and comfort of HMIF ITB graduates during the graduation parade', 'Act as percussions during the graduation parade'],
     year: '2025',
+    images: [],
   },
   {
     id: 'experience_13',
@@ -137,6 +149,7 @@ export const experiences: Experience[] = [
     description: 'Yearly concert by ITBJazz showcasing the talents of members and guest stars. Adikara and Wijaya 80.',
     tasks: ['Help the project officer with executive decisions', 'Provide administrative needs for organizing committee', 'Perform as a bass player for the opening band for Wijaya 80'],
     year: '2026',
+    images: [],
   },
   {
     id: 'experience_14',
@@ -145,6 +158,7 @@ export const experiences: Experience[] = [
     description: 'Festivities to celebrate the graduation of HMIF ITB members.',
     tasks: ['Ensure the safety and comfort of HMIF ITB graduates during the graduation parade', 'Act as percussions during the graduation parade'],
     year: '2026',
+    images: [],
   },
   {
     id: 'experience_15',
@@ -154,6 +168,7 @@ export const experiences: Experience[] = [
     tasks: ['Oversee and help the orientation of new HMIF ITB members', 'Oversee the selection of heads of organizing committees'],
     year: '2026',
     yearEnd: 'Present',
+    images: [],
   },
   {
     id: 'experience_16',
@@ -167,6 +182,7 @@ export const experiences: Experience[] = [
     ],
     year: '2026',
     yearEnd: 'Present',
+    images: [],
   },
 ];
 
