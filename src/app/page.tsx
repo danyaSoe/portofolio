@@ -20,7 +20,7 @@ export default function Home() {
           </h1>
 
           <div className="text-headline-md font-headline-md text-secondary-container mb-12 h-8">
-            <span className="typewriter-text">Computer Science Student • Software Developer • Tech Enthusiast</span>
+            <span className="typewriter-text">Computer Science Student • Tech Enthusiast</span>
             <span className="terminal-cursor text-surface-tint" aria-hidden="true"></span>
           </div>
 
@@ -56,13 +56,9 @@ export default function Home() {
                 />
               </div>
               <div className="space-y-6 text-on-surface-variant font-body-lg flex-1">
-                <p>I am a Computer Science student driven by the architecture of complex systems and the elegance of functional code. My journey in technology is a continuous loop of learning, building, and refining.</p>
-                <p>
-                  Specializing in <span className="text-secondary">Full-Stack Development</span> and{' '}
-                  <span className="text-surface-tint">Cloud Architecture</span>, I treat every project as a terminal session where efficiency and precision are paramount.
-                </p>
+                <p>I am a Computer Science student fascinated by the intersection of tech and my other interests such as music and art. My journey in technology is a continuous loop of learning, building, and refining.</p>
                 <div className="p-6 border border-outline-variant bg-surface-container-low italic">
-                  "The goal isn't just to write code that works, but to build systems that endure."
+                  "The goal isn't just to write code that works, but to build systems that bring value to people and communities around us."
                 </div>
               </div>
             </div>
@@ -96,22 +92,30 @@ export default function Home() {
               </div>
               <div>
                 <div className="flex justify-between mb-2">
-                  <span className="text-surface-tint">TYPESCRIPT</span>
+                  <span className="text-surface-tint">C</span>
                   <span className="text-on-surface-variant">80%</span>
                 </div>
                 <div className="w-full h-4 bg-surface-container-highest border border-outline-variant">
                   <div className="h-full bg-surface-tint" style={{ width: '80%' }}></div>
                 </div>
               </div>
+              <div>
+                <div className="flex justify-between mb-2">
+                  <span className="text-surface-tint">POSTGRESQL</span>
+                  <span className="text-on-surface-variant">70%</span>
+                </div>
+                <div className="w-full h-4 bg-surface-container-highest border border-outline-variant">
+                  <div className="h-full bg-surface-tint" style={{ width: '70%' }}></div>
+                </div>
+              </div>
               <div className="pt-4 border-t border-outline-variant">
                 <span className="text-secondary block mb-4 uppercase text-label-sm">Environment &amp; Tools</span>
                 <div className="flex flex-wrap gap-3">
-                  <span className="px-3 py-1 bg-surface-container border border-outline text-label-sm">REACT</span>
-                  <span className="px-3 py-1 bg-surface-container border border-outline text-label-sm">NODE.JS</span>
-                  <span className="px-3 py-1 bg-surface-container border border-outline text-label-sm">DOCKER</span>
-                  <span className="px-3 py-1 bg-surface-container border border-outline text-label-sm">AWS</span>
                   <span className="px-3 py-1 bg-surface-container border border-outline text-label-sm">POSTGRES</span>
                   <span className="px-3 py-1 bg-surface-container border border-outline text-label-sm">GIT</span>
+                  <span className="px-3 py-1 bg-surface-container border border-outline text-label-sm">GOOGLE WORKSPACE</span>
+                  <span className="px-3 py-1 bg-surface-container border border-outline text-label-sm">DOCKER</span>
+                  <span className="px-3 py-1 bg-surface-container border border-outline text-label-sm">ABLETON</span>
                 </div>
               </div>
             </div>

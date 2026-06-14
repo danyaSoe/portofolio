@@ -91,7 +91,7 @@ export default function ContactPage() {
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="text-center">
                 <div className="text-label-sm font-label-sm text-surface-tint opacity-60">GEOGRAPHIC_LOCATOR</div>
-                <div className="text-headline-md font-headline-md text-surface-tint font-bold">SAN FRANCISCO, CA</div>
+                <div className="text-headline-md font-headline-md text-surface-tint font-bold">BANDUNG, WEST JAVA</div>
               </div>
             </div>
           </div>
