@@ -3,9 +3,9 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="flex-1 w-full flex flex-col">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-gutter flex flex-col items-center justify-center min-h-screen">
+      <section className="pt-16 pb-16 px-gutter flex flex-col items-center justify-center flex-1">
         <div className="max-w-4xl w-full space-y-8">
           {/* Welcome Message */}
           <div className="space-y-4">

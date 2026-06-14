@@ -98,7 +98,7 @@ export default function HistoryPage() {
   };
 
   return (
-    <main className="pt-32 pb-section-gap px-gutter max-w-max-width mx-auto">
+    <main className="flex-1 w-full pt-16 pb-section-gap px-gutter max-w-max-width mx-auto">
       <Navbar activeTab="history" />
 
       {/* Hero Section */}

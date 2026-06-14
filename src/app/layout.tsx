@@ -22,12 +22,12 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="crt-overlay terminal-scrollbar">
+      <body className="crt-overlay terminal-scrollbar flex flex-col min-h-screen">
         {/* Background Layer */}
         <div className="fixed inset-0 z-0 bg-main opacity-40"></div>
 
         {/* Content */}
-        <div className="relative z-10">{children}</div>
+        <div className="relative z-10 flex-1 flex flex-col">{children}</div>
 
         {/* System Indicator */}
         <div className="fixed bottom-4 right-4 z-[60] bg-surface-tint text-on-primary px-3 py-1 font-label-sm text-label-sm hidden md:flex items-center gap-2">

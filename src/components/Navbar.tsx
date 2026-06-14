@@ -16,8 +16,8 @@ export default function Navbar({ activeTab = 'root' }: NavbarProps) {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-xl border-b border-outline-variant bg-surface/80 dark:bg-surface/80">
-      <div className="flex justify-between items-center w-full px-gutter max-w-max-width mx-auto h-16">
+    <nav className="w-full sticky top-0 z-50 backdrop-blur-xl border-b border-outline-variant bg-surface/80 dark:bg-surface/80">
+      <div className="mx-auto max-w-max-width flex justify-between items-center w-full px-gutter h-16">
         <Link href="/">
           <div className="text-headline-md font-headline-md font-bold text-surface-tint tracking-tighter cursor-pointer">
             SYS_PORTFOLIO_V1.0
