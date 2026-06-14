@@ -201,7 +201,7 @@ export const projects: Project[] = [
     description: 'A smart parking system prototype to detect filled parking slots and illegal parking made with ESP32 microcontrollers complete with a dashboard for a 4th semester subject.',
     stack: ['C', 'HTML'],
     sourceUrl: 'https://youtu.be/lJAE66GhE9s?si=Z-GmKIiZiHS_JaHY',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80',
+    image: 'https://res.cloudinary.com/dtjuzy2kr/image/upload/v1781450901/WhatsApp_Image_2026-06-14_at_20.52.56_ve0je1.jpg',
   },
 ];
 
