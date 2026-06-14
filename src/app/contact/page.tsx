@@ -1,13 +1,8 @@
 'use client';
 
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-
 export default function ContactPage() {
   return (
-    <main className="flex-1 w-full pt-16 pb-section-gap px-gutter max-w-max-width mx-auto">
-      <Navbar activeTab="contact" />
-
+    <div className="w-full max-w-max-width mx-auto px-gutter">
       {/* Header Section */}
       <header className="mb-16">
         <h1 className="text-display-lg-mobile md:text-display-lg font-display-lg text-surface-tint mb-4 uppercase tracking-tight">
@@ -103,7 +98,6 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <Footer />
-    </main>
+    </div>
   );
 }

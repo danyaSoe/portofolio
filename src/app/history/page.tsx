@@ -1,8 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 
 export default function HistoryPage() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -98,9 +96,7 @@ export default function HistoryPage() {
   };
 
   return (
-    <main className="flex-1 w-full pt-16 pb-section-gap px-gutter max-w-max-width mx-auto">
-      <Navbar activeTab="history" />
-
+    <div className="w-full max-w-max-width mx-auto px-gutter">
       {/* Hero Section */}
       <div className="mb-16">
         <div className="flex items-center gap-2 mb-4">
@@ -242,7 +238,6 @@ export default function HistoryPage() {
         </div>
       )}
 
-      <Footer />
-    </main>
+    </div>
   );
 }

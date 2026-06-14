@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="w-full py-8 border-t border-outline-variant mt-auto bg-surface dark:bg-surface">
-      <div className="mx-auto max-w-max-width flex flex-col md:flex-row justify-between items-center px-gutter gap-4">
+    <footer className="w-full border-t border-outline-variant bg-surface dark:bg-surface">
+      <div className="mx-auto max-w-max-width flex flex-col md:flex-row justify-between items-center px-gutter py-8 gap-4">
         <div className="text-label-sm font-label-sm text-surface-tint uppercase tracking-widest">
           © 2024 TERMINAL_SYSTEMS. ALL RIGHTS RESERVED.
         </div>

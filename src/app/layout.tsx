@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import '../styles/globals.css';
 
 export const metadata: Metadata = {
@@ -22,12 +24,21 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="crt-overlay terminal-scrollbar flex flex-col min-h-screen">
+      <body className="crt-overlay terminal-scrollbar min-h-screen flex flex-col">
         {/* Background Layer */}
         <div className="fixed inset-0 z-0 bg-main opacity-40"></div>
 
-        {/* Content */}
-        <div className="relative z-10 flex-1 flex flex-col">{children}</div>
+        <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-outline-variant backdrop-blur-xl bg-surface/80 dark:bg-surface/80">
+          <div className="mx-auto max-w-max-width flex items-center justify-between px-gutter h-16">
+            <Navbar />
+          </div>
+        </header>
+
+        <main className="relative z-10 flex-1 pt-24 pb-24">
+          {children}
+        </main>
+
+        <Footer />
 
         {/* System Indicator */}
         <div className="fixed bottom-4 right-4 z-[60] bg-surface-tint text-on-primary px-3 py-1 font-label-sm text-label-sm hidden md:flex items-center gap-2">

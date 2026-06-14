@@ -1,8 +1,5 @@
 'use client';
 
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-
 export default function AboutPage() {
   const skills = [
     { category: 'RUST / WEB_ASSEMBLY', percentage: 94 },
@@ -17,9 +14,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="flex-1 w-full pt-16 pb-section-gap px-gutter max-w-max-width mx-auto">
-      <Navbar activeTab="about" />
-
+    <div className="w-full max-w-max-width mx-auto px-gutter">
       {/* Hero Section / Identity */}
       <section className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center mb-section-gap">
         <div className="md:col-span-5 relative group">
@@ -233,7 +228,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <Footer />
-    </main>
+    </div>
   );
 }
