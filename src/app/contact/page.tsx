@@ -86,15 +86,7 @@ export default function ContactPage() {
             </a>
           </div>
 
-          {/* Decorative Asset */}
-          <div className="mt-8 relative aspect-video border border-outline-variant bg-surface-container-lowest overflow-hidden group max-w-2xl mx-auto w-full">
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="text-center">
-                <div className="text-label-sm font-label-sm text-surface-tint opacity-60">GEOGRAPHIC_LOCATOR</div>
-                <div className="text-headline-md font-headline-md text-surface-tint font-bold">BANDUNG, WEST JAVA</div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
 
