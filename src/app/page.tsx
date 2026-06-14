@@ -1,4 +1,9 @@
+import { experiences, projects } from '@/lib/portfolio-db';
+
 export default function Home() {
+  const featuredProjects = projects;
+  const featuredExperiences = experiences.slice(0, 4);
+
   return (
     <div className="w-full">
       <div className="fixed inset-0 scanlines z-[60] pointer-events-none opacity-20"></div>
@@ -15,10 +20,8 @@ export default function Home() {
           </h1>
 
           <div className="text-headline-md font-headline-md text-secondary-container mb-12 h-8">
-            <span>
-              Computer Science Student • Software Developer • Tech Enthusiast
-            </span>
-            <span className="terminal-cursor text-surface-tint">_</span>
+            <span className="typewriter-text">Computer Science Student • Software Developer • Tech Enthusiast</span>
+            <span className="terminal-cursor text-surface-tint" aria-hidden="true"></span>
           </div>
 
           <div className="flex flex-col md:flex-row gap-6 justify-center">
@@ -119,37 +122,12 @@ export default function Home() {
           <h2 className="font-headline-md text-headline-md text-surface-tint mb-12 uppercase tracking-widest flex items-center gap-2">
             <span className="w-8 h-[2px] bg-surface-tint"></span> 02. PROJECTS.DIR
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                color: 'dot-red',
-                title: 'NEURAL_OBSERVER',
-                description: 'Real-time computer vision system for automated traffic flow analysis.',
-                tags: ['#Python', '#OpenCV', '#PyTorch'],
-                image:
-                  'https://lh3.googleusercontent.com/aida-public/AB6AXuA-2SXWSRy8vlygaxvHpirApY8Bh0HIDnq8P35XJXYQpLPGQ9k0LsjRUWcOd37AhUidxRd5jq4CRPKnFqnj0kgDF1oWm8TsseCF3VP5Mm6Rj0Qvq6KAY8WJWsoEgR0LlKts0YCLqorqRNIaiPfaMsotD8vZGq-GTXTGQWkhAj9qrLsDezdM8XgJPkH32hU1Xs7POomQPks1AZoCT6e5zgb1Dy5S6teWSgaVwurIN8xDzATWWmHDNgY8W2j1cZU_Nob5wthaeNkTKq0',
-              },
-              {
-                color: 'dot-yellow',
-                title: 'LEDGER_SYNC',
-                description: 'Decentralized peer-to-peer file synchronization protocol using Rust.',
-                tags: ['#Rust', '#Web3', '#P2P'],
-                image:
-                  'https://lh3.googleusercontent.com/aida-public/AB6AXuDKMhLe2MMIw27MaS4FwnoyQZHC7FgUOjZey80K5gvpVvhitEC_T1DDxVOwKD2DET1Xp_8Bew7cMPygslqws1xb2AyeG_ykO8AdYAlZV2XEVE71rqImt7skFWujKbX-P4qvx7ZGZd2AVRzBo40wz0q3j-z_lC9usgjK7tcSc3rk4SozveViCGsRLCE8h09KeUgvn-wgVppQxgr3ZwgGWFsY5hp7Rd87jlLqgGwSvHu4kothkLE6IhQvoTCMABRE0lYtZuORNiLLd94',
-              },
-              {
-                color: 'dot-green',
-                title: 'CLOUD_WATCHER',
-                description: 'Serverless infrastructure monitoring tool with real-time alerting.',
-                tags: ['#Go', '#AWS', '#Terraform'],
-                image:
-                  'https://lh3.googleusercontent.com/aida-public/AB6AXuBVoOCQgx9dHc4GofegX1g4kJj7bc-OUv4lT7TmSwFwIzignNCDWUuZOu3dIXI6YkvGv_9AlhconOJhWeeP_4AXaHLH6SRHawI--X5l0369VlNO8V8OrAGD_iqcXPVB0jdk1URdZg31EKQnkfU1QydNNU-QgZtXLkCUnSqPQIKkQDLMCz51HawAeGD2WrTVAGpTICW48QMNq6ebuqp19XZTUPlpyO7-1dmj6EJA_ihcJkRFVUUtFaKyKb70WDqInkYXVjzJt20Ah-I',
-              },
-            ].map((project) => (
-              <div key={project.title} className="terminal-window rounded-lg overflow-hidden border-subtle crt-flicker hover:glow-green transition-all duration-300 group">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {featuredProjects.map((project) => (
+              <div key={project.id} className="terminal-window rounded-lg overflow-hidden border-subtle crt-flicker hover:glow-green transition-all duration-300 group">
                 <div className="terminal-header">
-                  <div className={`dot ${project.color}`}></div>
-                  <span className="text-label-sm font-code-md text-on-surface-variant ml-2">{project.title.toLowerCase().replace(/ /g, '_')}.bin</span>
+                  <div className="dot dot-red"></div>
+                  <span className="text-label-sm font-code-md text-on-surface-variant ml-2">{project.id}</span>
                 </div>
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -163,12 +141,12 @@ export default function Home() {
                   <h3 className="text-headline-md font-headline-md text-on-surface mb-2">{project.title}</h3>
                   <p className="text-on-surface-variant text-body-md mb-4">{project.description}</p>
                   <div className="flex gap-2 mb-4 flex-wrap">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="text-label-sm font-code-md text-surface-tint">{tag}</span>
+                    {project.stack.map((tag) => (
+                      <span key={tag} className="text-label-sm font-code-md text-surface-tint">#{tag}</span>
                     ))}
                   </div>
-                  <a className="text-surface-tint font-code-md flex items-center gap-2 hover:underline" href="#projects">
-                    EXECUTE_SRC <span className="material-symbols-outlined text-[18px]">open_in_new</span>
+                  <a className="text-surface-tint font-code-md flex items-center gap-2 hover:underline" href={project.sourceUrl} target="_blank" rel="noreferrer">
+                    VIEW SOURCE <span className="material-symbols-outlined text-[18px]">open_in_new</span>
                   </a>
                 </div>
               </div>
@@ -181,34 +159,12 @@ export default function Home() {
             <span className="w-8 h-[2px] bg-surface-tint"></span> 03. HISTORY.LOG
           </h2>
           <div className="relative border-l border-subtle ml-4 pl-10 space-y-12">
-            {[
-              {
-                date: '2023 - PRESENT',
-                title: 'LEAD DEVELOPER @ UNIVERSITY TECH LAB',
-                summary:
-                  'Spearheading the development of open-source research tools. Optimized data processing pipelines by 40% using concurrent programming patterns in Go.',
-                accent: 'bg-surface-tint',
-              },
-              {
-                date: '2022 - 2023',
-                title: 'SOFTWARE ENGINEERING INTERN @ DATAFLOW_CO',
-                summary:
-                  'Implemented microservices architecture for real-time telemetry. Migrated legacy monolith systems to Dockerized environments.',
-                accent: 'bg-surface-tint/50',
-              },
-              {
-                date: '2021 - 2022',
-                title: 'CS TEACHING ASSISTANT',
-                summary:
-                  'Mentored 100+ students in Data Structures and Algorithms. Automated grading systems using Python scripts.',
-                accent: 'bg-surface-tint/30',
-              },
-            ].map((entry) => (
-              <div key={entry.title} className="relative">
-                <div className={`absolute -left-[45px] top-1 w-[10px] h-[10px] ${entry.accent} rounded-full shadow-[0_0_10px_#4AF626]`}></div>
-                <span className="text-label-sm font-code-md text-secondary block mb-2">[ {entry.date} ]</span>
-                <h3 className="text-headline-md font-headline-md text-on-surface">{entry.title}</h3>
-                <p className="text-on-surface-variant text-body-md mt-4">{entry.summary}</p>
+            {featuredExperiences.map((entry) => (
+              <div key={entry.id} className="relative">
+                <div className="absolute -left-[45px] top-1 w-[10px] h-[10px] bg-surface-tint rounded-full shadow-[0_0_10px_#4AF626]"></div>
+                <span className="text-label-sm font-code-md text-secondary block mb-2">[ {entry.year}{entry.yearEnd ? ` - ${entry.yearEnd}` : ''} ]</span>
+                <h3 className="text-headline-md font-headline-md text-on-surface">{entry.event}</h3>
+                <p className="text-on-surface-variant text-body-md mt-4">{entry.description}</p>
               </div>
             ))}
           </div>
@@ -230,20 +186,20 @@ export default function Home() {
                 {
                   icon: 'terminal',
                   title: 'GitHub',
-                  subtitle: '/ddamaris-dev',
+                  subtitle: '/danyaSoe',
                   href: '#',
                 },
                 {
                   icon: 'photo_camera',
                   title: 'Instagram',
-                  subtitle: '@sys_damaris',
+                  subtitle: '@damarisdanya',
                   href: '#',
                 },
                 {
                   icon: 'mail',
                   title: 'Email',
-                  subtitle: 'danya@terminal.sys',
-                  href: 'mailto:danya@terminal.sys',
+                  subtitle: 'danyasoe@gmail.com',
+                  href: 'mailto:danyasoe@gmail.com',
                 },
               ].map((card) => (
                 <a
