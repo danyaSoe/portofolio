@@ -130,7 +130,7 @@ export default function AboutPage() {
               <div className="w-3 h-3 rounded-full bg-secondary/40 border border-secondary/60"></div>
               <div className="w-3 h-3 rounded-full bg-surface-tint/40 border border-surface-tint/60"></div>
             </div>
-            <div className="font-code-md text-label-sm text-on-surface-variant">root@sys_damaris: ~/skills_matrix</div>
+            <div className="font-code-md text-label-sm text-on-surface-variant">root@sys_damaris: ~/skills_matrix — deployed via CI/CD</div>
             <div className="w-12"></div>
           </div>
 
