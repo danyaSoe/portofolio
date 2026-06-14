@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { experiences } from '@/lib/portfolio-db';
 
 export default function HistoryPage() {
@@ -154,10 +155,12 @@ export default function HistoryPage() {
                         key={idx}
                         className="group overflow-hidden rounded border border-outline-variant aspect-square bg-black"
                       >
-                        <img
+                        <Image
                           src={image}
                           alt={`Record ${idx + 1}`}
                           className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 grayscale group-hover:grayscale-0"
+                          width={300}
+                          height={300}
                         />
                       </div>
                     ))}

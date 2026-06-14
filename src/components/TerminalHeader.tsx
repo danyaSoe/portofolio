@@ -15,7 +15,10 @@ export default function TerminalHeader({ title, subtitle, onClose }: TerminalHea
           <div className="w-2.5 h-2.5 rounded-full bg-secondary/40"></div>
           <div className="w-2.5 h-2.5 rounded-full bg-surface-tint/40"></div>
         </div>
-        <span className="font-label-sm text-label-sm text-on-surface-variant tracking-widest">{title}</span>
+        <div>
+          <span className="font-label-sm text-label-sm text-on-surface-variant tracking-widest">{title}</span>
+          {subtitle && <div className="font-label-sm text-label-sm text-on-surface-variant/70">{subtitle}</div>}
+        </div>
       </div>
       {onClose && (
         <button

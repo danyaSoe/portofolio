@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { experiences, projects } from '@/lib/portfolio-db';
 
 export default function Home() {
@@ -58,16 +59,18 @@ export default function Home() {
             </h2>
             <div className="flex flex-col lg:flex-row gap-8 items-center lg:items-start">
               <div className="w-48 h-48 flex-shrink-0 rounded-lg overflow-hidden border border-surface-tint shadow-[0_0_15px_rgba(74,246,38,0.3)]">
-                <img
+                <Image
                   alt="Danya Damaris"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                   src="https://res.cloudinary.com/dtjuzy2kr/image/upload/v1781440246/danya_bust_fvddg8.jpg"
+                  width={192}
+                  height={192}
                 />
               </div>
               <div className="space-y-6 text-on-surface-variant font-body-lg flex-1">
                 <p>I am a Information Systems and Technology student fascinated by the intersection of tech and my other interests such as music and art. My journey in technology is a continuous loop of learning, building, and refining.</p>
                 <div className="p-6 border border-outline-variant bg-surface-container-low italic">
-                  "The goal isn't just to write code that works, but to build systems that bring value to people and communities around us."
+                  &quot;The goal isn&apos;t just to write code that works, but to build systems that bring value to people and communities around us.&quot;
                 </div>
               </div>
             </div>
@@ -157,10 +160,12 @@ export default function Home() {
                   <span className="text-label-sm font-code-md text-on-surface-variant ml-2">{project.id}</span>
                 </div>
                 <div className="relative h-48 overflow-hidden">
-                  <img
+                  <Image
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
                     alt={project.title}
                     src={project.image}
+                    width={400}
+                    height={192}
                   />
                   <div className="absolute inset-0 bg-surface/60 mix-blend-multiply"></div>
                 </div>

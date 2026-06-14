@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function AboutPage() {
   const skills = [
     { category: 'TYPESCRIPT / NEXT.JS / TAILWIND', percentage: 94 },
@@ -20,10 +22,12 @@ export default function AboutPage() {
         <div className="md:col-span-5 relative group">
           <div className="absolute -inset-2 bg-surface-tint/20 rounded-lg blur-lg group-hover:bg-surface-tint/30 transition-all duration-500"></div>
           <div className="relative bg-surface border-2 border-surface-tint/50 p-1 rounded-lg overflow-hidden shadow-2xl">
-            <img
+            <Image
               alt="Danya Damaris"
               className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500 rounded-sm"
               src="https://res.cloudinary.com/dtjuzy2kr/image/upload/v1781440246/danya_bust_fvddg8.jpg"
+              width={400}
+              height={500}
             />
             <div className="absolute bottom-4 left-4 right-4 py-2 px-3 bg-surface/90 border border-surface-tint/30 backdrop-blur-md rounded">
               <p className="font-code-md text-label-sm text-surface-tint">ID: DAMARIS_DANYA_ST_IST</p>
@@ -65,7 +69,7 @@ export default function AboutPage() {
           </div>
           <h3 className="font-headline-md text-headline-md text-surface-tint mb-4">0x01: Philosophy</h3>
           <p className="text-on-surface-variant leading-relaxed mb-6">
-            Code isn't just logic; it's a canvas. I believe that computing achieves its highest form when married with the rhythm of music and the aesthetics of art. For me, software development is an iterative feedback loop—constantly compiling ideas, deploying creativity, and refining the output.
+            Code isn&apos;t just logic; it&apos;s a canvas. I believe that computing achieves its highest form when married with the rhythm of music and the aesthetics of art. For me, software development is an iterative feedback loop—constantly compiling ideas, deploying creativity, and refining the output.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <div className="p-4 bg-surface-container-low border border-outline-variant rounded">

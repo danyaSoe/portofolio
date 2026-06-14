@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 import { projects } from '@/lib/portfolio-db';
 
@@ -49,17 +50,19 @@ export default function ProjectsPage() {
               </div>
             </div>
             <div className="p-0 aspect-video relative overflow-hidden bg-black">
-              <img
+              <Image
                 className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-500"
                 alt={project.title}
                 src={project.image}
+                width={600}
+                height={338}
               />
             </div>
             <div className="p-6">
               <h3 className="font-headline-md text-headline-md mb-2 text-on-surface">{project.title}</h3>
               <p className="text-on-surface-variant text-body-md line-clamp-2">{project.description}</p>
               <div className="mt-4 flex flex-wrap gap-2">
-                {(project.tags ?? project.stack ?? []).map((tag: string) => (
+                {(project.stack ?? []).map((tag: string) => (
                   <span
                     key={tag}
                     className="px-2 py-1 text-code-md font-code-md border border-outline-variant text-on-surface-variant rounded"
@@ -96,7 +99,7 @@ export default function ProjectsPage() {
                 </div>
                 <p className="text-on-surface-variant text-body-md mb-6 max-w-xl">{projects[3].description}</p>
                 <div className="flex flex-wrap gap-3">
-                  {(projects[3].tags ?? projects[3].stack ?? []).map((tag: string) => (
+                  {(projects[3].stack ?? []).map((tag: string) => (
                     <span
                       key={tag}
                       className="px-3 py-1 bg-surface-tint/10 text-surface-tint font-code-md text-code-md border border-surface-tint/30"
@@ -164,12 +167,14 @@ export default function ProjectsPage() {
               </button>
             </div>
 
-            <div className="flex flex-col md:flex-row h-full max-h-[819px] overflow-y-auto">
+            <div className="flex flex-col md:flex-row">
               <div className="md:w-1/2 border-r border-outline-variant bg-black flex items-center justify-center relative group">
-                <img
+                <Image
                   alt={selectedProject.title}
                   className="w-full h-full object-cover opacity-80"
                   src={selectedProject.image}
+                  width={600}
+                  height={400}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent md:hidden"></div>
               </div>
