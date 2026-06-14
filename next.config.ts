@@ -1,18 +1,16 @@
-import type { NextConfig } from "next";
+/** @type {import('next').Config} */
+const nextConfig = {
+  // Mengatur output ke mode static export (wajib untuk GitHub Pages)
+  output: 'export', 
+  
+  // Beritahu Next.js kalau kamu menggunakan sub-folder /portofolio
+  basePath: '/portofolio',
+  assetPrefix: '/portofolio/',
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || (basePath ? `${basePath}/` : "");
-
-const nextConfig: NextConfig = {
-  output: "export",
-
-  basePath,
-
-  assetPrefix,
-
+  // Opsional: Jika kamu menggunakan komponen <Image /> bawaan Next.js
   images: {
     unoptimized: true,
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
