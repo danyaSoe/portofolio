@@ -1,8 +1,17 @@
+import Link from 'next/link';
 import { experiences, projects } from '@/lib/portfolio-db';
 
 export default function Home() {
   const featuredProjects = projects;
-  const featuredExperiences = experiences.slice(0, 4);
+  const featuredExperiences = [...experiences]
+    .sort((a, b) => {
+      const normalizeEnd = (value?: string) => (value === 'Present' ? Infinity : Number(value ?? a.year));
+      const aEnd = normalizeEnd(a.yearEnd);
+      const bEnd = normalizeEnd(b.yearEnd);
+      if (aEnd !== bEnd) return bEnd - aEnd;
+      return Number(b.year) - Number(a.year);
+    })
+    .slice(0, 4);
 
   return (
     <div className="w-full">
@@ -52,7 +61,7 @@ export default function Home() {
                 <img
                   alt="Danya Damaris"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTMXrmHiy_ONsBTvCdkd-tbdo15IkeHnaG8O84ALQ12PxMLgtLrdm6vgGF6XkTjU8_RSTxOajeEY1w4ytgRdPM92N_yN8YATX2p33xPVYNlK1_mbJfKODA6flugC2663eCqUiJJq4oVRDOro-T5cUvOltfAM8C1FIKPoAdoQAiHyECmsUuY7R6EIJ-S0CTrM9-_B88GuMpx0MY1rTaup8WUeyEkj_qAh6QUoOcxbBIm-U-9LdjVZ_YIivBDAm594pvbuPoIbyj6jQ"
+                  src="https://res.cloudinary.com/dtjuzy2kr/image/upload/v1781440246/danya_bust_fvddg8.jpg"
                 />
               </div>
               <div className="space-y-6 text-on-surface-variant font-body-lg flex-1">
@@ -124,7 +133,9 @@ export default function Home() {
 
         <section id="projects" className="py-section-gap-mobile md:py-section-gap">
           <h2 className="font-headline-md text-headline-md text-surface-tint mb-12 uppercase tracking-widest flex items-center gap-2">
-            <span className="w-8 h-[2px] bg-surface-tint"></span> 02. PROJECTS.DIR
+            <Link href="/projects" className="inline-flex items-center gap-2">
+              <span className="w-8 h-[2px] bg-surface-tint"></span> 02. PROJECTS.DIR
+            </Link>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {featuredProjects.map((project) => (
@@ -160,7 +171,9 @@ export default function Home() {
 
         <section id="history" className="py-section-gap-mobile md:py-section-gap">
           <h2 className="font-headline-md text-headline-md text-surface-tint mb-12 uppercase tracking-widest flex items-center gap-2">
-            <span className="w-8 h-[2px] bg-surface-tint"></span> 03. HISTORY.LOG
+            <Link href="/history" className="inline-flex items-center gap-2">
+              <span className="w-8 h-[2px] bg-surface-tint"></span> 03. HISTORY.LOG
+            </Link>
           </h2>
           <div className="relative border-l border-subtle ml-4 pl-10 space-y-12">
             {featuredExperiences.map((entry) => (
@@ -177,7 +190,9 @@ export default function Home() {
         <section id="contact" className="py-section-gap-mobile md:py-section-gap mb-20">
           <div className="max-w-max-width mx-auto px-gutter">
             <h2 className="font-headline-md text-headline-md text-surface-tint mb-12 uppercase tracking-widest flex items-center gap-2">
-              <span className="w-8 h-[2px] bg-surface-tint"></span> 04. GET_IN_TOUCH
+              <Link href="/contact" className="inline-flex items-center gap-2">
+                <span className="w-8 h-[2px] bg-surface-tint"></span> 04. GET_IN_TOUCH
+              </Link>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[

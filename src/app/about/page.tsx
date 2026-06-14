@@ -23,7 +23,7 @@ export default function AboutPage() {
             <img
               alt="Danya Damaris"
               className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500 rounded-sm"
-              src="https://lh3.googleusercontent.com/aida/AP1WRLtJrmfTYgh4UqbnAK2IJckWULaErbHDi391aRlemcyYQC2Y9NrzbDPaqrGq18JgP-m0trDtWcEz5Vb95WoLbAydDP2QSvgELZaAs-7m-oM8ytjOweKufgQiBBPMb4x_oHkUbOw1PbkfMw4qQwWd8PYjdI7EF2Pl-14EwJ0mBZErgqV-9Lvt6ZZEY2aMQUKw1UFtGvdTFBknCMtAEyHb8Jlou_jroFSTBnGhcevApONrlMCAfzhS_HU6aMY"
+              src="https://res.cloudinary.com/dtjuzy2kr/image/upload/v1781440246/danya_bust_fvddg8.jpg"
             />
             <div className="absolute bottom-4 left-4 right-4 py-2 px-3 bg-surface/90 border border-surface-tint/30 backdrop-blur-md rounded">
               <p className="font-code-md text-label-sm text-surface-tint">ID: DAMARIS_DANYA_SR_ENG</p>

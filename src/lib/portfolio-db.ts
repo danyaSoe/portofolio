@@ -177,7 +177,7 @@ export const projects: Project[] = [
     description: 'A cooking game complete with GUI made with Java and JavaFX for a 3rd semester subject.',
     stack: ['Java', 'JavaFX'],
     sourceUrl: 'https://github.com/rnfaizi/K02_B_Tubes-OOP.git',
-    image: 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1000&q=80',
+    image: 'https://res.cloudinary.com/dtjuzy2kr/image/upload/v1781440376/oop_project_h1jfwr.jpg',
   },
   {
     id: 'iot_final_project',

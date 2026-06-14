@@ -116,8 +116,7 @@ body {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 2px solid transparent;
-  animation: typing 4s steps(52, end) 1, blink-caret 0.75s step-end infinite;
+  animation: typing 4s steps(52, end) 1;
 }
 
 @keyframes typing {
@@ -129,15 +128,7 @@ body {
   }
 }
 
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: rgba(255, 255, 255, 0.85);
-  }
-}
+
 
 /* Material Symbols Icon Styling */
 .material-symbols-outlined {
