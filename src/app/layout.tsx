@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import '../styles/globals.css';
+import BackgroundCanvas from '@/components/BackgroundCanvas';
 
 export const metadata: Metadata = {
   title: 'SYS_PORTFOLIO_V1.0',
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className="crt-overlay terminal-scrollbar min-h-screen flex flex-col">
         {/* Background Layer */}
         <div className="fixed inset-0 z-0 bg-main opacity-40"></div>
+        <BackgroundCanvas />
 
         <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-outline-variant backdrop-blur-xl bg-surface/80 dark:bg-surface/80">
           <div className="mx-auto max-w-max-width flex items-center justify-between px-gutter h-16">

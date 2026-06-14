@@ -2,15 +2,15 @@
 
 export default function AboutPage() {
   const skills = [
-    { category: 'RUST / WEB_ASSEMBLY', percentage: 94 },
-    { category: 'TYPESCRIPT / REACT / NEXT', percentage: 98 },
-    { category: 'PYTHON / FAST_API', percentage: 82 },
+    { category: 'TYPESCRIPT / NEXT.JS / TAILWIND', percentage: 94 },
+    { category: 'PYTHON / SCIPY / STATS', percentage: 88 },
+    { category: 'JAVA / JAVAFX / GRADLE', percentage: 85 },
   ];
 
   const infraSkills = [
-    { category: 'WEBGL / THREE_JS / SHADERS', percentage: 88 },
-    { category: 'KUBERNETES / TERRAFORM', percentage: 85 },
-    { category: 'POSTGRES / REDIS / VECTOR_DB', percentage: 91 },
+    { category: 'DIGITAL ART / FREELANCE', percentage: 90 },
+    { category: 'AUDIO PROD / BANDWIDTH', percentage: 82 },
+    { category: 'ASSEMBLY / X86 / GDB', percentage: 75 },
   ];
 
   return (
@@ -26,7 +26,7 @@ export default function AboutPage() {
               src="https://res.cloudinary.com/dtjuzy2kr/image/upload/v1781440246/danya_bust_fvddg8.jpg"
             />
             <div className="absolute bottom-4 left-4 right-4 py-2 px-3 bg-surface/90 border border-surface-tint/30 backdrop-blur-md rounded">
-              <p className="font-code-md text-label-sm text-surface-tint">ID: DAMARIS_DANYA_SR_ENG</p>
+              <p className="font-code-md text-label-sm text-surface-tint">ID: DAMARIS_DANYA_ST_IST</p>
             </div>
           </div>
         </div>
@@ -39,13 +39,11 @@ export default function AboutPage() {
             </span>
           </div>
           <h1 className="font-display-lg text-display-lg md:text-display-lg mb-6 leading-tight">
-            Engineering <span className="text-surface-tint">Architectural</span> Solutions for the Future.
+            Engineering <span className="text-surface-tint">Creative Interfaces</span> at the Intersect of Art and Code.
           </h1>
           <div className="bg-surface border border-outline-variant p-6 rounded-lg">
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
-              &gt; I am Danya Damaris, a senior software engineer specializing in high-performance distributed systems
-              and modern UI architectures. My approach blends the rigorous technical precision of low-level systems with
-              the aesthetic elegance of retro-futuristic design.
+              &gt; I am a Information Systems and Technology student fascinated by the intersection of tech and my other interests such as music and art. My journey in technology is a continuous loop of learning, building, and refining.
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="px-6 py-2 bg-surface border border-outline-variant font-code-md text-label-sm hover:text-surface-tint hover:border-surface-tint transition-all duration-150 active:scale-95 group flex items-center gap-2">
@@ -67,20 +65,17 @@ export default function AboutPage() {
           </div>
           <h3 className="font-headline-md text-headline-md text-surface-tint mb-4">0x01: Philosophy</h3>
           <p className="text-on-surface-variant leading-relaxed mb-6">
-            Technology isn't just a tool; it's a medium for architectural excellence. I believe in writing code that is
-            self-documenting, systems that are resilient by default, and interfaces that respect the user's
-            intelligence. My work is heavily influenced by the modularity of Unix and the tactile feedback of legacy
-            hardware.
+            Code isn't just logic; it's a canvas. I believe that computing achieves its highest form when married with the rhythm of music and the aesthetics of art. For me, software development is an iterative feedback loop—constantly compiling ideas, deploying creativity, and refining the output.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <div className="p-4 bg-surface-container-low border border-outline-variant rounded">
-              <h4 className="font-code-md text-label-sm text-on-surface mb-2">MODULARITY</h4>
+              <h4 className="font-code-md text-label-sm text-on-surface mb-2">CREATIVITY</h4>
               <div className="w-full h-1 bg-outline-variant rounded-full overflow-hidden">
                 <div className="h-full w-[95%] bg-surface-tint"></div>
               </div>
             </div>
             <div className="p-4 bg-surface-container-low border border-outline-variant rounded">
-              <h4 className="font-code-md text-label-sm text-on-surface mb-2">PRECISION</h4>
+              <h4 className="font-code-md text-label-sm text-on-surface mb-2">ITERATION</h4>
               <div className="w-full h-1 bg-outline-variant rounded-full overflow-hidden">
                 <div className="h-full w-[88%] bg-surface-tint"></div>
               </div>
@@ -96,8 +91,8 @@ export default function AboutPage() {
                 check_circle
               </span>
               <div>
-                <span className="font-code-md text-on-surface">Cloud Scalability</span>
-                <p className="text-label-sm text-on-surface-variant">Kubernetes & AWS native solutions</p>
+                <span className="font-code-md text-on-surface">Creative Technology</span>
+                <p className="text-label-sm text-on-surface-variant">Exploring the intersection of code, sound, and visual arts</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
@@ -105,8 +100,8 @@ export default function AboutPage() {
                 check_circle
               </span>
               <div>
-                <span className="font-code-md text-on-surface">Interactive UX</span>
-                <p className="text-label-sm text-on-surface-variant">Three.js & WebGL experiences</p>
+                <span className="font-code-md text-on-surface">Continuous Iteration</span>
+                <p className="text-label-sm text-on-surface-variant">An endless loop of learning, building, and refining systems</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
@@ -114,8 +109,8 @@ export default function AboutPage() {
                 check_circle
               </span>
               <div>
-                <span className="font-code-md text-on-surface">Open Source</span>
-                <p className="text-label-sm text-on-surface-variant">Core contributor to rust-lang libs</p>
+                <span className="font-code-md text-on-surface">Interactive Design</span>
+                <p className="text-label-sm text-on-surface-variant">Crafting aesthetic and functional software interfaces</p>
               </div>
             </li>
           </ul>
@@ -165,7 +160,7 @@ export default function AboutPage() {
             <div>
               <h3 className="font-headline-md text-headline-md mb-8 flex items-center gap-3">
                 <span className="material-symbols-outlined text-surface-tint">brush</span>
-                INFRA_VISUALS
+                CREATIVE_LOGIC
               </h3>
               <div className="space-y-8">
                 {infraSkills.map((skill) => (
@@ -184,45 +179,6 @@ export default function AboutPage() {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Passion & Hobbies / Cards */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div className="space-y-6">
-          <div className="flex items-center gap-2 text-surface-tint mb-4">
-            <span className="material-symbols-outlined">psychology</span>
-            <h2 className="font-headline-md text-headline-md">PROBLEM_SOLVING</h2>
-          </div>
-          <p className="font-body-md text-on-surface-variant leading-relaxed">
-            Beyond coding, I am an avid enthusiast of mathematical logic and algorithmic challenges. I spend significant
-            time exploring the intersection of creative coding and real-time visualization. My downtime is often occupied
-            by modular synthesizers—patching cables to generate complex, evolving sonic landscapes that mirror the
-            complexity of software systems.
-          </p>
-          <div className="p-6 bg-surface border border-outline-variant bg-surface-container-low/30 rounded-lg border-dashed border-2">
-            <p className="font-code-md text-label-sm italic text-on-surface-variant">
-              "The best code is not just functional; it is intentional. Every byte should serve a purpose in the larger
-              architecture of the system."
-            </p>
-          </div>
-        </div>
-
-        <div className="relative h-full min-h-[300px] bg-surface border border-outline-variant rounded-lg overflow-hidden">
-          <img
-            alt="Retro hardware setup"
-            className="w-full h-full object-cover opacity-40 grayscale group-hover:opacity-60 transition-opacity"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkGjkwi1tOtNHH3nPjqKNqP6jSJ_pexh1VNPELYlzfpT_60UFOg-tTgFacqdNdj8y0jYWC0Q2XsWyO8N2HAFjIf2geQchW_nltYK6VPRQXzJxcQAl3b4LLcWBIjPETXpjJH1yyG-Zjjd1G0exS4NFrWMvwvwkKXSuGoKYMlicPbzfdz5M4y06YiHtPrjKm3XTV8db-8zfDZL15OerKbNDQ7e1FdHtvB0AUIV5Own3gRTWRX6VHxdCB1SKbTT4Db0IaOCie3UKJTuM"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
-          <div className="absolute bottom-6 left-6">
-            <h4 className="font-headline-md text-headline-md text-surface-tint mb-1">INTERESTS_ARRAY</h4>
-            <div className="flex gap-4 font-code-md text-label-sm text-on-surface-variant">
-              <span>#SYNTHS</span>
-              <span>#CRT_MODS</span>
-              <span>#OS_DEV</span>
             </div>
           </div>
         </div>
