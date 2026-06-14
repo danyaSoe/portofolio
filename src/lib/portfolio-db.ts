@@ -184,20 +184,6 @@ export const experiences: Experience[] = [
     yearEnd: 'Present',
     images: [],
   },
-  {
-    id: 'experience_16',
-    event: 'Sekolah Mentor KAT ITB 2026',
-    role: 'Head of Materials and Methods',
-    description: 'Training program for future mentors of KAT ITB 2026.',
-    tasks: [
-      'Design a curriculum for future mentors of KAT ITB 2026',
-      'Train mentors to provide necessary help to future mentors of KAT ITB 2026',
-      'Design a scoring matrix for the selection of future mentors of KAT ITB 2026',
-    ],
-    year: '2026',
-    yearEnd: 'Present',
-    images: [],
-  },
 ];
 
 export const projects: Project[] = [
